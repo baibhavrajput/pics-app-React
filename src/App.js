@@ -1,9 +1,15 @@
 import "./App.css";
+import SearchBar from './components/SearchBar';
 
 function App() {
+
+  const submitHandler = (searchTerm) => {
+    console.log('Do a search with' , searchTerm);
+  };
+
   return (
     <div>
-      App
+      <SearchBar onSubmit={submitHandler}/>
     </div>
   );
 }
