@@ -3,11 +3,11 @@ import { useState } from "react";
 function SearchBar(props) {
   const onSubmit = props.onSubmit;
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
   const onFormSubmitHandler = (event) => {
     event.preventDefault();
-    onSubmit("cars");
+    onSubmit(searchTerm);
   };
 
   const onChangeHandler = (event) => {
